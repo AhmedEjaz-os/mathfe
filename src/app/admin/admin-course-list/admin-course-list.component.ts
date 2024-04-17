@@ -37,6 +37,7 @@ export class AdminCourseListComponent implements OnInit {
     Description: true,
     Start_Maxile: true,
     End_Maxile: true,
+    Status:true,
     Action: true
   }
   constructor(

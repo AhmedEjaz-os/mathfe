@@ -6,30 +6,31 @@ import { PayPalEnvironment } from 'ngx-paypal';
 export const environment = {
   production: false,
   apiURL: 'https://mathapi.pamelalim.me',
+//  apiURL: 'localhost:8000',
 
   //apiURL: 'http://devapi.allgifted.com',
 
-  // webAuth: {
-  //   clientID: 'eVJv6UFM9GVdukBWiURczRCxmb6iaUYG',
-  //   domain: 'pamelalim.auth0.com',
-  //   audience: 'https://pamelalim.auth0.com/userinfo',
-  //   redirectUri: 'http://localhost:4200/home',
-  //   theme: {
-  //     logo: "http://school.all-gifted.com/pluginfile.php/1/theme_lambda/logo/1472088488/newlogo.png"
-  //   }
-  // },
-  
   webAuth: {
-    clientID: 'bs3jSKz2Ewrye8dD2qRVrD0Tra2tOqHC',
-    domain: 'allgiftedllc.au.auth0.com',
-    audience: 'https://allgiftedllc.au.auth0.com/userinfo',
-    redirectUri: 'https://math.allgifted.com/home',
+    clientID: 'x0AAlKqaQ8Zw6YF4kdMzTE08oAXjIhGJ',
+     domain: 'pamelalim.auth0.com',
+     audience: 'https://mathapi.allgifted.com',
+     redirectUri: 'http://localhost:4200/home',
+     theme: {
+       logo: "http://school.all-gifted.com/pluginfile.php/1/theme_lambda/logo/1472088488/newlogo.png"
+     }
+   },
+  
+  //webAuth: {
+    //clientID: 'bs3jSKz2Ewrye8dD2qRVrD0Tra2tOqHC',
+    //domain: 'allgiftedllc.au.auth0.com',
+    //audience: 'https://allgiftedllc.au.auth0.com/userinfo',
+    //redirectUri: 'https://math.allgifted.com/home',
 //    redirectUri: 'http://localhost:4200/home',
 
-    theme: {
-      logo: "https://www.allgifted.com/wp-content/uploads/2020/06/ags@2x-trans.png"
-    }
-  },
+    //theme: {
+      //logo: "https://www.allgifted.com/wp-content/uploads/2020/06/ags@2x-trans.png"
+    //}
+  //},
   
   payPal: {
     payPalEnvironment: PayPalEnvironment.Sandbox,

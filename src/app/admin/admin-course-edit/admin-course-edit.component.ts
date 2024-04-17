@@ -20,7 +20,7 @@ export class AdminCourseEditComponent implements OnInit, OnDestroy {
   formData: FormData = new FormData();
   loading = true;
 
-  course = new Course('id', 'course', 'description', 'image', 'start_maxile_score', 'end_maxile_score');
+  course = new Course('id', 'course', 'description', 'image', 'start_maxile_score', 'end_maxile_score', 'status');
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -34,7 +34,8 @@ export class AdminCourseEditComponent implements OnInit, OnDestroy {
     this.loading = true;
     this.courseService.getCourse(this.id).subscribe(
       data => {
-        this.course = data;
+        this.course = data.course;
+        this.statuses = data.statuses;
         this.imgURL = this.beURL + this.course.image;
         this.loading = false;
       },
@@ -57,6 +58,7 @@ export class AdminCourseEditComponent implements OnInit, OnDestroy {
     this.formData.append('course', course.course);
     this.formData.append('start_maxile_score', course.start_maxile_score);
     this.formData.append('end_maxile_score', course.end_maxile_score);
+    this.formData.append('status_id', course.status_id);
     this.loading = true;
     this.courseService.updateCourse(this.formData, course.id)
       .subscribe(

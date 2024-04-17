@@ -80,9 +80,18 @@
                 <input type="number" min="100" max="5000" step="100" class="form-control" id="end_maxile_score" name="end_maxile_score"
                   placeholder="Target maxile score" [(ngModel)]="course.end_maxile_score" #end_maxile_score="ngModel"
                   required>
-                <div *ngIf="end_maxile_score.errors?.required && end_maxile_score.dirty" class="alert alert-danger">
-                  Target Maxile Score is required
-                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="status" class="col-lg-2 control-label">Status</label>
+              <div class="col-lg-10">
+                <select class="form-control" id="status_id" name="status_id"
+                placeholder="Status" [(ngModel)]="course.status_id" #status="ngModel"
+                required>
+                   <option *ngFor="let status of statuses" [value]="status.id">
+                    {{status.status}}
+                  </option>
+                </select>
               </div>
             </div>
             <div class="form-group">

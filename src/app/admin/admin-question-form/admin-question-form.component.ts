@@ -209,9 +209,6 @@ export class AdminQuestionFormComponent implements OnInit {
 
       this.difficulties = data.difficulties;
       this.levels = data.skills;
-      console.log("levels check");
-      console.log(this.levels);
-
       this.statuses = data.statuses;
       this.types = data.type;
 
