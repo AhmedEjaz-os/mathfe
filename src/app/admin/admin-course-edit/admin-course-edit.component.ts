@@ -35,7 +35,7 @@ export class AdminCourseEditComponent implements OnInit, OnDestroy {
     this.courseService.getCourse(this.id).subscribe(
       data => {
         this.course = data.course;
-        this.statuses = data.statuses;
+        this.status = data.statuses;
         this.imgURL = this.beURL + this.course.image;
         this.loading = false;
       },
