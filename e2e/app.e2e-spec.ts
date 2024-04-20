@@ -1,14 +1,14 @@
-import { NgmathPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('ngmath App', () => {
-  let page: NgmathPage;
+describe('mathfe App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new NgmathPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to ag!!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });

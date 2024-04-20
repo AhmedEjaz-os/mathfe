@@ -20,7 +20,7 @@ export class AdminCourseEditComponent implements OnInit, OnDestroy {
   formData: FormData = new FormData();
   loading = true;
 
-  course = new Course('id', 'course', 'description', 'image', 'start_maxile_score', 'end_maxile_score', 'status');
+  course: any = new Course('id', 'course', 'description', 'image', 'start_maxile_score', 'end_maxile_score', 'status');
 
   constructor(
     private activatedRoute: ActivatedRoute,
